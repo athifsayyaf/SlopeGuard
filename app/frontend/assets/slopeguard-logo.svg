@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="SlopeGuard AI logo">
+  <defs>
+    <linearGradient id="ridge" x1="18" y1="104" x2="112" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f7d4f"/>
+      <stop offset=".48" stop-color="#7aa35a"/>
+      <stop offset="1" stop-color="#d7a542"/>
+    </linearGradient>
+    <linearGradient id="slide" x1="44" y1="82" x2="100" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f2c14e"/>
+      <stop offset="1" stop-color="#b54833"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="22" fill="#f8faf6"/>
+  <path d="M16 90 42 48l16 18 25-36 30 60H16Z" fill="url(#ridge)"/>
+  <path d="M53 90c7-17 17-28 32-36 9-5 15-12 21-23" fill="none" stroke="url(#slide)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M22 92h84" stroke="#2b4235" stroke-width="5" stroke-linecap="round"/>
+  <path d="M31 39h24M37 30h12M66 30h16" stroke="#6f8b76" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+  <text x="64" y="114" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="900" fill="#1f3528">SG</text>
+</svg>

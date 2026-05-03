@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+app/outputs/
+app/logs/
+app/desktop_profile/
+app/project_config.json
+*.aux
+*.log
+*.pdb
+tools/launcher/bin/
+tools/launcher/obj/
+.dotnet_home/

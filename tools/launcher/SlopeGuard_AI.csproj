@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <AssemblyName>SlopeGuard_AI</AssemblyName>
+    <RootNamespace>SlopeGuardAI</RootNamespace>
+    <ApplicationIcon>slopeguard.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="slopeguard.ico" />
+  </ItemGroup>
+</Project>

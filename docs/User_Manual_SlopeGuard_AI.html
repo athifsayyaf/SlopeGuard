@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SlopeGuard AI User Manual</title>
+  <style>
+    body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: #183326; background: #eef4ee; line-height: 1.55; }
+    main { max-width: 980px; margin: 0 auto; padding: 42px 28px 64px; }
+    h1 { font-size: 38px; margin: 0 0 8px; color: #2f7d4f; }
+    h2 { margin-top: 34px; padding-top: 18px; border-top: 1px solid #cddbcf; color: #244f35; }
+    h3 { color: #365f3f; margin-top: 24px; }
+    code, pre { font-family: Consolas, "Courier New", monospace; }
+    pre { background: #f8faf6; border: 1px solid #cddbcf; border-radius: 8px; padding: 12px; overflow: auto; }
+    .hero { background: #f8faf6; border: 1px solid #cddbcf; border-radius: 12px; padding: 24px; box-shadow: 0 8px 24px rgba(48, 74, 58, .12); }
+    .tagline { margin: 0; color: #637468; font-size: 18px; }
+    ul { padding-left: 22px; }
+    .note { background: #fff8e7; border-left: 4px solid #d7a542; padding: 12px 16px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>SlopeGuard AI User Manual</h1>
+    <p class="tagline">Landslide intelligence from terrain, satellite, InSAR, and ML evidence.</p>
+  </section>
+
+  <h2>1. Opening The Software</h2>
+  <p>Double-click <strong>SlopeGuard_AI.exe</strong>. The executable starts the local Python backend and opens SlopeGuard AI in a standalone app-style window.</p>
+  <p class="note">Keep the supporting files beside the EXE: <code>SlopeGuard_AI.dll</code>, <code>SlopeGuard_AI.deps.json</code>, and <code>SlopeGuard_AI.runtimeconfig.json</code>.</p>
+
+  <h2>2. Interface Layout</h2>
+  <ul>
+    <li><strong>Left sidebar:</strong> Project, DEM, Sentinel-2, InSAR, Inventory, Stack, ML, Interpretation, Report.</li>
+    <li><strong>Top bar:</strong> active workflow, layer controls, TIFF/PNG/JPG preview opener.</li>
+    <li><strong>Center:</strong> map and raster preview canvas.</li>
+    <li><strong>Right panel:</strong> parameters for the selected tool.</li>
+    <li><strong>Bottom panel:</strong> status, progress, details, logs, and output files.</li>
+  </ul>
+
+  <h2>3. Typical Workflow</h2>
+  <ol>
+    <li>Set project CRS, resolution, AOI, and output folder.</li>
+    <li>Load DEM and create slope, aspect, TWI, and hillshade.</li>
+    <li>Create Sentinel-2 indices such as NDVI, EVI, BSI, or NDWI.</li>
+    <li>Register InSAR velocity and coherence rasters.</li>
+    <li>Rasterize the landslide inventory mask.</li>
+    <li>Build the feature stack.</li>
+    <li>Run ML comparison without InSAR and with InSAR.</li>
+    <li>Generate interpretation and report outputs.</li>
+  </ol>
+
+  <h2>4. Outputs</h2>
+  <p>Scientific rasters are saved as GeoTIFF. Browser-friendly previews are saved as PNG/JPG.</p>
+  <pre>slope.tif
+slope_map.png
+slope_map.jpg
+model_comparison.csv
+slopeguard_report.pdf</pre>
+
+  <h2>5. Viewing TIFF Files</h2>
+  <p>Paste a TIFF path into the top preview box and click <strong>Open</strong>. SlopeGuard AI creates PNG/JPG previews and displays the map in the canvas.</p>
+
+  <h2>6. Troubleshooting</h2>
+  <h3>Connection refused</h3>
+  <p>The backend did not start. Run this in PowerShell:</p>
+  <pre>cd "E:\Lenovo_path_moved\moved_due_to_storageissue\New project\slideagent-ai"
+python backend\server.py</pre>
+
+  <h3>Missing Python package</h3>
+  <pre>python -m pip install -r requirements.txt</pre>
+
+  <h3>Permission denied for .ovr</h3>
+  <p>Windows has locked an existing raster overview. The app now saves numbered outputs such as <code>slope_01.tif</code>.</p>
+
+  <h2>7. Design References</h2>
+  <ul>
+    <li>GIS icon language inspired by Font-GIS.</li>
+    <li>Cartographic color ramps inspired by CartoColor.</li>
+    <li>Green, white, and earth colors chosen for landslide and terrain mapping.</li>
+  </ul>
+</main>
+</body>
+</html>

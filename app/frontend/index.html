@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SlopeGuard AI</title>
+    <link rel="icon" href="./assets/slopeguard.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./assets/slopeguard-icon-192.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="splashScreen">
+      <div class="splash-content">
+        <h1>SlopeGuard AI</h1>
+        <p class="splash-tagline">Landslide intelligence from terrain, satellite, and InSAR data.</p>
+        <p class="splash-version">v0.1 prototype</p>
+        <div class="splash-loader">
+          <div class="splash-spinner"></div>
+          <p id="splashLoadingText">Starting SlopeGuard AI...</p>
+        </div>
+      </div>
+    </div>
+    <div id="app" class="hidden">
+      <aside class="sidebar">
+        <div class="brand">
+          <img class="brand-logo" src="./assets/slopeguard-logo.svg" alt="SlopeGuard AI logo" />
+          <div>
+            <h1>SlopeGuard AI</h1>
+            <p>Landslide intelligence from DEM, satellite, InSAR, and ML evidence.</p>
+          </div>
+        </div>
+        <nav id="moduleNav" class="module-nav"></nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">Active workflow</div>
+            <h2 id="moduleTitle">Project Setup</h2>
+          </div>
+          <div class="topbar-tools">
+            <div class="layer-strip" aria-label="Layer visibility">
+              <strong>Layers</strong>
+              <label><input type="checkbox" checked /> DEM</label>
+              <label><input type="checkbox" checked /> S2</label>
+              <label><input type="checkbox" checked /> InSAR</label>
+              <label><input type="checkbox" checked /> Susceptibility</label>
+              <span class="carto-ramp" title="CartoColor-inspired landslide risk palette"></span>
+            </div>
+            <div class="preview-control top-preview-control">
+              <input id="previewPath" placeholder="Open TIFF/PNG/JPG path" />
+              <button onclick="createPreview()">Open</button>
+            </div>
+          </div>
+        </header>
+
+        <section class="center">
+          <section class="map-shell">
+            <div class="map-toolbar">
+              <button title="Zoom in">+</button>
+              <button title="Zoom out">−</button>
+              <button title="Fit layer">□</button>
+              <button title="Select bounding box">⌖</button>
+            </div>
+            <div class="map-canvas">
+              <img id="rasterPreview" class="raster-preview" alt="Raster preview" />
+              <div class="terrain"></div>
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="map-overlay">
+                <path d="M5 82 C20 70 18 55 31 48 S54 37 52 18" />
+                <path d="M38 90 C44 70 55 64 70 48 S84 24 95 15" />
+                <path d="M1 30 C22 28 30 38 45 44 S73 60 100 54" />
+                <rect x="18" y="22" width="52" height="48" />
+              </svg>
+              <div class="map-chip risk">High susceptibility</div>
+              <div class="map-chip aoi">AOI</div>
+              <div class="north">N</div>
+              <div class="scale"><span></span>5 km</div>
+              <div id="previewLabel" class="preview-label">Preview canvas</div>
+            </div>
+          </section>
+
+          <aside class="panel">
+            <div id="panelContent"></div>
+          </aside>
+        </section>
+
+        <footer class="bottom-panel">
+          <div class="progress-row">
+            <span id="jobStatus">Ready</span>
+            <div class="progress"><div id="progressBar"></div></div>
+            <button id="toggleJobDetails">Details</button>
+            <button id="refreshJobs">Refresh</button>
+          </div>
+          <div id="jobDetails" class="log-grid hidden">
+            <pre id="logOutput">SlopeGuard AI ready.</pre>
+            <div>
+              <h3 id="toggleOutputs">Output files</h3>
+              <ul id="outputFiles"></ul>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

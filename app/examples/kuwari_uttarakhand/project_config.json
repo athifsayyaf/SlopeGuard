@@ -1,0 +1,18 @@
+{
+  "project_name": "Kuwari Uttarakhand Landslide Monitoring",
+  "study_area_name": "Kuwari/Joshimath, Uttarakhand",
+  "crs": "EPSG:32644",
+  "resolution_m": 30,
+  "output_folder": "E:\\Lenovo_path_moved\\moved_due_to_storageissue\\New project\\slideagent-ai\\outputs",
+  "bbox": {
+    "min_lon": 79.47,
+    "min_lat": 30.4,
+    "max_lon": 79.82,
+    "max_lat": 30.68
+  },
+  "aoi_vector": null,
+  "dem_path": "D:\\The_worker\\Non_work\\PhD_related\\sansar_phD\\Assignment\\Work\\Download_DEM\\rasters_COP30\\output_hh.tif",
+  "sentinel2_folder": "D:\\The_worker\\Non_work\\PhD_related\\sansar_phD\\Assignment\\Work\\Senteine02",
+  "insar_folder": "D:\\The_worker\\Non_work\\PhD_related\\sansar_phD\\Assignment\\Work\\InSAR",
+  "inventory_path": "D:\\The_worker\\Non_work\\PhD_related\\sansar_phD\\Assignment\\Work\\Downloaded_invent\\JOshimath\\1_20260501161152176\\landslide_point_20260501161135235\\landslide_point_20260501161135235.shp"
+}

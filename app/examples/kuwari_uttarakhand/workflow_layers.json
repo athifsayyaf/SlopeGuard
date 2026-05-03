@@ -1,0 +1,27 @@
+[
+  {
+    "name": "slope",
+    "path": "outputs/dem/slope.tif"
+  },
+  {
+    "name": "aspect",
+    "path": "outputs/dem/aspect.tif"
+  },
+  {
+    "name": "twi",
+    "path": "outputs/dem/twi.tif"
+  },
+  {
+    "name": "ndvi",
+    "path": "D:\\The_worker\\Non_work\\PhD_related\\sansar_phD\\Assignment\\Work\\Results\\FROM_s2\\joshimath_ndvi.tif"
+  },
+  {
+    "name": "los_velocity",
+    "path": "D:\\The_worker\\Non_work\\PhD_related\\sansar_phD\\Assignment\\Work\\InSAR\\Joshimath\\jOSHIMATH_velocity_ps.tif"
+  },
+  {
+    "name": "landslide_mask",
+    "path": "outputs/inventory/landslide_mask.tif",
+    "role": "target"
+  }
+]
