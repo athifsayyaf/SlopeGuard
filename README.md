@@ -10,9 +10,15 @@ SlopeGuard AI is a geospatial software prototype for landslide monitoring. It he
 
 ## Download For Windows
 
-Download the Windows executable:
+Recommended download:
 
-[**Download SlopeGuard AI Prototype 01 for Windows (.exe)**](release/windows/SlopeGuard_AI_Prototype_01_Windows.exe)
+[**Download SlopeGuard AI Prototype 01 Windows Package (.zip)**](release/windows/SlopeGuard_AI_Prototype_01_Windows_Package.zip)
+
+This ZIP contains the EXE and all required support files.
+
+Individual EXE:
+
+[**SlopeGuard_AI_Prototype_01_Windows.exe**](release/windows/SlopeGuard_AI_Prototype_01_Windows.exe)
 
 Keep these required support files in the same folder as the EXE:
 
@@ -28,7 +34,7 @@ The Windows release folder is:
 release/windows/
 ```
 
-To open the software, double-click:
+After downloading the ZIP, extract it and double-click:
 
 ```text
 SlopeGuard_AI_Prototype_01_Windows.exe
