@@ -1,125 +1,115 @@
 # SlopeGuard AI
 
-SlopeGuard AI is a desktop-style geospatial software prototype for landslide monitoring and landslide susceptibility mapping. It guides a user from DEM, Sentinel-2, Sentinel-1/InSAR, and landslide inventory inputs toward terrain derivatives, raster previews, feature-stack preparation, model comparison, interpretation, and report outputs.
+![SlopeGuard AI Logo](release/windows/SlopeGuard_AI_logo.png)
 
-## Quick Start For Windows
+**Version:** Prototype 01  
+**Platform:** Windows  
+**Application Type:** Desktop-style landslide monitoring and susceptibility mapping software
 
-Use the packaged launcher:
+SlopeGuard AI is a geospatial software prototype for landslide monitoring. It helps users process DEM, Sentinel-2, InSAR, and landslide inventory data into terrain products, raster previews, analysis stacks, model-comparison outputs, interpretation drafts, and report-ready results.
 
-```text
-release/windows/SlopeGuard_AI.exe
-```
+## Download For Windows
 
-Keep these support files beside the EXE:
+Download the Windows executable:
 
-```text
-release/windows/SlopeGuard_AI.dll
-release/windows/SlopeGuard_AI.deps.json
-release/windows/SlopeGuard_AI.runtimeconfig.json
-```
+[**Download SlopeGuard AI Prototype 01 for Windows (.exe)**](release/windows/SlopeGuard_AI_Prototype_01_Windows.exe)
 
-Keep the repository folder structure intact. The EXE looks for the application source in:
+Keep these required support files in the same folder as the EXE:
 
 ```text
-app/
+SlopeGuard_AI.dll
+SlopeGuard_AI.deps.json
+SlopeGuard_AI.runtimeconfig.json
 ```
 
-The EXE starts the local Python backend and opens SlopeGuard AI in a standalone app-style window.
-
-## Run From Source
-
-```powershell
-cd app
-python -m pip install -r requirements.txt
-python backend\server.py
-```
-
-Then, in another terminal:
-
-```powershell
-.\SlopeGuard_AI_Desktop.bat
-```
-
-## Repository Structure
+The Windows release folder is:
 
 ```text
-app/                 Source application
-  backend/           Local Python backend and geospatial processing modules
-  frontend/          HTML/CSS/JS interface and assets
-  examples/          Kuwari/Joshimath example workflow files
-  tests/             Smoke tests using synthetic sample data
-docs/                User manual and package notes
-release/windows/     Windows launcher EXE and required support files
-tools/               Launcher source and icon-generation utility
+release/windows/
 ```
 
-## Main Features
-
-- DEM processing: slope, aspect, TWI, hillshade
-- Sentinel-2 indices: NDVI, EVI, Bare Soil Index, NDWI, simple LULC
-- InSAR layer registration: LOS velocity and coherence
-- Landslide inventory rasterization
-- TIFF visualization through PNG/JPG quicklooks
-- Stack Builder scaffold
-- ML model comparison scaffold: without InSAR vs with InSAR
-- Interpretation and PDF report generator
-- GIS-style icons and CartoColor-inspired map palettes
-
-## Requirements
-
-Python packages are listed in:
+To open the software, double-click:
 
 ```text
-app/requirements.txt
+SlopeGuard_AI_Prototype_01_Windows.exe
 ```
 
-Important packages:
+## Available Options
 
-- rasterio
-- geopandas
-- numpy
-- pandas
-- scikit-learn
-- xgboost
-- shap
-- matplotlib
-- reportlab
+SlopeGuard AI Prototype 01 includes the following software options:
 
-The Windows launcher requires .NET 6 Desktop Runtime if it is not already installed.
+- **Project Setup**
+  - Create/open project configuration
+  - Set CRS, resolution, output folder, and AOI path
 
-## Testing
+- **DEM Processing**
+  - Slope
+  - Aspect
+  - TWI
+  - Hillshade
 
-Run the smoke test:
+- **Sentinel-2 Processing**
+  - NDVI
+  - EVI
+  - Bare Soil Index
+  - NDWI
+  - Simple LULC classification
 
-```powershell
-cd app
-python .\tests\smoke_test_features.py
-```
+- **Sentinel-1 / InSAR**
+  - Register LOS velocity raster
+  - Register mean coherence raster
+  - Generate PNG/JPG map previews
 
-The test creates synthetic sample data and checks:
+- **Landslide Inventory**
+  - Rasterize vector inventory
+  - Align inventory mask to DEM grid
+  - Create binary landslide mask
 
-- DEM slope/aspect/TWI/hillshade
-- Sentinel-2 NDVI/EVI/BSI/NDWI/LULC
-- InSAR registration
-- Inventory rasterization
-- Preview generation
-- Stack Builder
-- ML scaffold
-- Interpretation
-- Report generator
+- **Raster Preview**
+  - Open existing GeoTIFF files inside the interface
+  - Automatically create PNG and JPG map previews
 
-## Manuals
+- **Stack Builder**
+  - Prepare feature stack manifest
+  - Export feature table scaffold
 
-Manuals are available in:
+- **Machine Learning**
+  - Model-comparison scaffold
+  - Without-InSAR vs with-InSAR experiment setup
+  - Outputs for AUROC, F1-score, precision, recall workflow
+
+- **Interpretation**
+  - Draft explanation of feature influence
+  - InSAR contribution discussion
+  - Geomorphological interpretation support
+
+- **Report Generator**
+  - PDF report shell
+  - One-slide PDF summary
+  - Metrics and interpretation placeholders
+
+## Output Formats
+
+SlopeGuard AI saves outputs in GIS and report-friendly formats:
 
 ```text
-docs/User_Manual_SlopeGuard_AI.md
-docs/User_Manual_SlopeGuard_AI.html
+.tif   GeoTIFF raster outputs
+.png   map preview images
+.jpg   map preview images
+.csv   model and feature tables
+.json  project and processing metadata
+.pdf   report and one-slide summary
 ```
 
-## Design References
+## User Manual
 
-- Font-GIS: https://github.com/Viglino/font-gis
-- CartoColor: https://github.com/CartoDB/CartoColor
+Read the manual here:
 
-SlopeGuard AI uses local icons and local color ramps inspired by those projects, so the app remains offline-friendly.
+[User Manual - Markdown](docs/User_Manual_SlopeGuard_AI.md)  
+[User Manual - HTML](docs/User_Manual_SlopeGuard_AI.html)
+
+## Notes
+
+- This is **Prototype 01**, intended for demonstration, testing, and further development.
+- The EXE is a Windows desktop launcher for the local SlopeGuard AI application.
+- Keep the downloaded repository folder structure intact so the launcher can find the application files.
