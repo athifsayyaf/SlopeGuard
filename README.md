@@ -18,6 +18,12 @@ release/windows/SlopeGuard_AI.deps.json
 release/windows/SlopeGuard_AI.runtimeconfig.json
 ```
 
+Keep the repository folder structure intact. The EXE looks for the application source in:
+
+```text
+app/
+```
+
 The EXE starts the local Python backend and opens SlopeGuard AI in a standalone app-style window.
 
 ## Run From Source

@@ -50,6 +50,7 @@ internal static class Program
             Path.Combine(exeDir, "slideagent-ai"),
             Path.Combine(exeDir, "SlopeGuard_AI_App"),
             Path.GetFullPath(Path.Combine(exeDir, "..", "slideagent-ai")),
+            Path.GetFullPath(Path.Combine(exeDir, "..", "..", "app")),
             Path.GetFullPath(Path.Combine(exeDir, "..", "..", "slideagent-ai")),
             current,
             Path.Combine(current, "slideagent-ai")

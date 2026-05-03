@@ -16,11 +16,13 @@ SlopeGuard_AI.exe
 
 The executable starts the backend automatically and opens SlopeGuard AI as a desktop-style application window. You do not need to manually type `http://127.0.0.1:8765`.
 
+Keep the repository folder structure intact. The EXE in `release/windows` uses the source app in the top-level `app` folder.
+
 If the app does not open, check:
 
 ```text
-slideagent-ai\logs\desktop_backend.log
-slideagent-ai\logs\desktop_backend_error.log
+app\logs\desktop_backend.log
+app\logs\desktop_backend_error.log
 ```
 
 ## 3. Main Interface
@@ -233,13 +235,13 @@ The software creates PNG/JPG previews and displays the image in the map canvas.
 Default outputs are saved under:
 
 ```text
-slideagent-ai\outputs
+app\outputs
 ```
 
 Job logs are saved under:
 
 ```text
-slideagent-ai\logs
+app\logs
 ```
 
 ## 7. Troubleshooting
@@ -295,4 +297,3 @@ SlopeGuard AI uses:
 7. Build feature stack.
 8. Run ML comparison with and without InSAR.
 9. Generate susceptibility map and report.
-
